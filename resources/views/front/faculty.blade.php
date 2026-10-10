@@ -9,10 +9,58 @@
       </ul>
    </div>
 </div>
+<style>
+.facility-sec-page {
+    padding: 70px 0;
+    background-color: #f9faff;
+}
+.faculty-detail-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eaeaea;
+}
+.table-bordered {
+    border: none;
+}
+.table-bordered th, .table-bordered td {
+    border: 1px solid #f1f1f1;
+    vertical-align: middle;
+    padding: 15px;
+}
+.table-bordered thead th {
+    background-color: #032274;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(3, 34, 116, 0.02);
+}
+.table-striped tbody tr:hover {
+    background-color: rgba(227, 40, 69, 0.05);
+}
+/* Custom headings for faculty groups */
+td.text-center[colspan="3"] {
+    background-color: #e32845 !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+    .faculty-detail-box { padding: 15px; }
+}
+</style>
 <section class="faculty-area facility-sec-page">
    <div class="container">
       <div class="row">
-         <div class="col-lg-12 aos-init aos-animate" data-aos="fade-right">
+         <div class="col-lg-12" data-aos="fade-up" data-aos-duration="1000">
             <div class="faculty-detail-box table-responsive">
                <table class="table table-striped table-bordered">
                   <thead>

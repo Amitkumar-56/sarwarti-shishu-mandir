@@ -20,6 +20,53 @@
       <link rel="stylesheet" href="{{ asset('public/front') }}/css/lightgallery.min.css" type="text/css">
       <link rel="stylesheet" href="{{ asset('public/front') }}/css/dark.css">
       <link rel="stylesheet" href="{{ asset('public/front') }}/css/responsive.css">
+      <style>
+         @media (min-width: 992px) {
+             .desktop-nav .navbar-nav .dropdown-menu {
+                 background-color: #ffffff !important;
+                 border: none !important;
+                 border-radius: 12px !important;
+                 box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+                 padding: 10px 0 !important;
+                 min-width: 260px !important;
+                 opacity: 0;
+                 visibility: hidden;
+                 transform: translateY(20px);
+                 display: block !important; 
+                 transition: all 0.3s ease-in-out !important;
+                 position: absolute !important;
+                 top: 100%;
+                 left: 0;
+             }
+             .desktop-nav .navbar-nav .nav-item:hover .dropdown-menu {
+                 opacity: 1;
+                 visibility: visible;
+                 transform: translateY(0);
+             }
+             .desktop-nav .navbar-nav .dropdown-menu li {
+                 display: block !important;
+                 width: 100%;
+             }
+             .desktop-nav .navbar-nav .dropdown-menu li a {
+                 padding: 12px 25px !important;
+                 color: #333333 !important;
+                 font-size: 15px !important;
+                 font-weight: 500 !important;
+                 border-bottom: 1px solid #f5f5f5 !important;
+                 transition: all 0.3s ease !important;
+                 display: block !important;
+                 text-transform: capitalize !important;
+             }
+             .desktop-nav .navbar-nav .dropdown-menu li:last-child a {
+                 border-bottom: none !important;
+             }
+             .desktop-nav .navbar-nav .dropdown-menu li a:hover {
+                 background-color: #fdf2f4 !important;
+                 color: #e32845 !important;
+                 padding-left: 32px !important; 
+             }
+         }
+      </style>
    </head>
     <body>
       <div class="navbar-area nav-bg-2" style="border-bottom: 2px solid #e0e0e0; padding: 5px 0;">
@@ -27,9 +74,9 @@
             <div class="container">
                <div class="mobile-responsive-menu">
                   <div class="logo">
-                     <a href="{{ url('/') }}">
-                     <img src="{{ asset('public/front') }}/images/saraswati-logo-new.jpg" class="main-logo" alt="logo" style="max-height: 80px; mix-blend-mode: darken; background: transparent;">
-                     <img src="{{ asset('public/front') }}/images/saraswati-logo-new.jpg" class="white-logo" alt="logo" style="max-height: 80px; mix-blend-mode: darken; background: transparent;">
+                     <a href="{{ url('/') }}" style="display: inline-block;">
+                     <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="main-logo" alt="logo" style="max-height: 80px;">
+                     <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="white-logo" alt="logo" style="max-height: 80px;">
                      </a>
                   </div>
                   <div class="mobile-downloads">
@@ -50,9 +97,9 @@
          <div class="desktop-nav">
             <div class="container-fluid">
                <nav class="navbar navbar-expand-md navbar-light">
-                  <a class="navbar-brand" href="{{ url('/') }}" style="background: transparent;">
-                  <img src="{{ asset('public/front') }}/images/saraswati-logo-new.jpg" class="main-logo" alt="logo" style="max-height: 85px; mix-blend-mode: darken; background: transparent;">
-                  <img src="{{ asset('public/front') }}/images/saraswati-logo-new.jpg" class="white-logo" alt="logo" style="max-height: 85px; mix-blend-mode: darken; background: transparent;">
+                  <a class="navbar-brand" href="{{ url('/') }}">
+                  <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="main-logo" alt="logo" style="max-height: 85px;">
+                  <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="white-logo" alt="logo" style="max-height: 85px;">
                   </a>
                   <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                      <ul class="navbar-nav mx-auto">
@@ -142,7 +189,7 @@
                         </li>
                      </ul>
                      <div class="others-options d-none d-md-flex align-items-center ml-auto" style="margin-left: auto; background: transparent;">
-                        <img src="{{ asset('public/front') }}/images/vidyabharati_logo.jpg" alt="Vidya Bharati Logo" style="max-height: 85px; mix-blend-mode: darken; background: transparent;">
+                        <img src="{{ asset('public/front') }}/images/vidyabharati_logo.png" alt="Vidya Bharati Logo" style="max-height: 85px; mix-blend-mode: multiply; background: transparent;">
                      </div>
                   </div>
                </nav>

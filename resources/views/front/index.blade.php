@@ -219,23 +219,86 @@
       </div>
    </div>
 </div>
-<section class="clients-testimonials-areas">
+<style>
+.testimonial-item {
+    background: #ffffff; 
+    padding: 40px 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); 
+    margin: 15px 10px; 
+    border-bottom: 4px solid #e32845; 
+    transition: all 0.4s ease;
+    height: 100%;
+}
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(227, 40, 69, 0.1) !important;
+}
+.testimonial-img-wrapper {
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+}
+.testimonial-item img {
+    width: 100px !important; 
+    height: 100px !important; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #e32845; 
+    padding: 3px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.student_name4t {
+    font-size: 22px; 
+    font-weight: 700; 
+    color: #111; 
+    margin-bottom: 5px;
+}
+.student_location {
+    font-size: 14px; 
+    color: #e32845; 
+    margin-bottom: 20px; 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.testimonial-desc {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.8; 
+    font-style: italic;
+}
+.testimonial-desc i {
+    color: #e32845; 
+    font-size: 24px; 
+    opacity: 0.3;
+    margin: 0 5px;
+}
+</style>
+<section class="clients-testimonials-areas pt-100 pb-70" style="background-color: #f9faff;">
    @php
    $feedback = DB::table('feedback')->get();
    @endphp  
    <div class="container">
-      <div class="section-title">
-         <h2>Parents Feedback</h2>
+      <div class="section-title text-center">
+         <span class="sub-title" style="color: #e32845; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px;">Testimonials</span>
+         <h2 style="font-size: 35px; font-weight: 700; color: #032274;">What Parents Say About Us</h2>
       </div>
       <div class="row tstimonial-sec">
          <div class="col-lg-12">
             <div class="testimonial-slider owl-carousel owl-theme">
                @foreach($feedback as $item) 
                <div class="testimonial-item text-center">
-                  <img src="{{ url('public/uploads/images/'.$item->image  ?? '')}}" alt="Image"  >
+                  <div class="testimonial-img-wrapper">
+                     <img src="{{ url('public/uploads/images/'.$item->image  ?? '')}}" alt="Image" onerror="this.src='{{ asset('public/front/images/user-dummy.png') }}'">
+                  </div>
                   <p class="student_name4t">{{ $item->name ?? '' }}</p>
-                  <p class="student_location">({{ $item->place ??  '' }})</p>
-                  <p><span class="quote-left"><i class="ri-quote-left"></i></span> {!! $item->description ?? '' !!} <span class="quote-right"><i class="fa fa-quote-right"></i></span></p>
+                  <p class="student_location">{{ $item->place ??  '' }}</p>
+                  <p class="testimonial-desc">
+                     <i class="ri-double-quotes-l"></i> 
+                     {!! $item->description ?? '' !!} 
+                     <i class="ri-double-quotes-r"></i>
+                  </p>
                </div>
                @endforeach
             </div>
