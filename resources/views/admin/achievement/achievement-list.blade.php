@@ -32,7 +32,6 @@
                         <thead>
                            <tr>     
                               <th>Title</th>
-                              <th>Description</th>
                               <th>Images</th>
                               <th>Action</th>
                            </tr>
@@ -41,7 +40,6 @@
                            @foreach($achievement as $item)
                            <tr class="odd gradeX">
                               <td>{{ $item->title ?? '' }}</td>
-                              <td>{{ $item->description ?? '' }}</td>
                               <td><a class="btn btn-info" href="{{ url('/admin/achievement-list/'.$item->id.'/upload') }}">Add / View Images </a></td> 
                               <td>
                                  <a href="{{ url('/admin/edit-achievement/'.$item->id  ?? '') }}"><i class="bx bx-edit-alt"></i> </a>

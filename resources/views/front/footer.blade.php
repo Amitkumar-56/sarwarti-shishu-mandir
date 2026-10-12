@@ -48,7 +48,7 @@ Established in 1956, Saraswati Shishu Mandir provides quality education, modern 
                <div class="social-content">
                   <ul>
                      <li>
-                        <a href="https://www.facebook.com/groups/665338486989843/" target="_blank"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572129551488" target="_blank"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
                      </li>
                 
                      <li>
@@ -82,7 +82,7 @@ Established in 1956, Saraswati Shishu Mandir provides quality education, modern 
    </div>
 </div>
 <div class="auto-hide socialsticky">
-   <a class="social_icon ion-social-facebook s-i" target="_blank" href="https://www.facebook.com/groups/665338486989843/" title="Click to open in a new window" rel="nofollow"><i class="ri-facebook-fill"></i></a>
+   <a class="social_icon ion-social-facebook s-i" target="_blank" href="https://www.facebook.com/profile.php?id=61572129551488" title="Click to open in a new window" rel="nofollow"><i class="ri-facebook-fill"></i></a>
    
    <a class="social_icon ion-social-youtube s-i" target="_blank" href="javascript:void(0)" title="Click to open in a new window" rel="nofollow"><i class="ri-linkedin-fill"></i></a>
    <a class="social_icon ion-social-instagram s-i" target="_blank" href="https://twitter.com/svmrajnagar" title="Click to open in a new window" rel="nofollow"><i class="ri-twitter-fill"></i></a>
@@ -176,7 +176,7 @@ Established in 1956, Saraswati Shishu Mandir provides quality education, modern 
 <script src="{{ asset('public/front') }}/js/form-validator.min.js"></script>
 <script src="{{ asset('public/front') }}/js/contact-form-script.js"></script>
 <script src="{{ asset('public/front') }}/js/ajaxchimp.min.js"></script>
-<script src="{{ asset('public/front') }}/js/custom.js"></script>
+<script src="{{ asset('public/front') }}/js/custom.js?v=1.1"></script>
 <script src="{{ asset('public/front') }}/js/jqueryg.min.js"></script>
 <script src="{{ asset('public/front') }}/js/jquery.marquee.js"></script>
 

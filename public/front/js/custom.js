@@ -165,6 +165,9 @@
         navText: ['<i class="ri-arrow-left-line"></i>', '<i class="ri-arrow-right-line"></i>', ],
         responsive: {
             0: {
+                items: 1,
+            },
+            576: {
                 items: 2,
             },
             768: {

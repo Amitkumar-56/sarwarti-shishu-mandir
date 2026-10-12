@@ -44,14 +44,10 @@
                         <form action="{{ url('admin/store-achievement') }}" method="POST" enctype="multipart/form-data">
                            @csrf
                            <div class="row gy-4">
-                              <div class="col-xxl-6 col-md-12">
-                                 <label for="labelInput" class="form-label">Title</label>
-                                 <input type="text" name="title" class="form-control">
-                              </div> 
                               <div class="col-xxl-12 col-md-12">
-                                 <label for="labelInput" class="form-label">Description</label>
-                                 <textarea id="content" type="text" name="description" class="form-control"></textarea>
-                              </div>
+                                 <label for="labelInput" class="form-label">Title</label>
+                                 <input type="text" name="title" class="form-control" placeholder="Enter Achievement Title" required>
+                              </div> 
                               <div class="col-xxl-12 col-md-12">
                                  <input type="submit" value="Submit" class="btn btn-primary">
                               </div>

@@ -406,6 +406,20 @@ Route::put('/admin/update-admission-process/{id}', [AdminController::class, 'upd
 
 Route::get('/admin/delete-admission-process/{id}', [AdminController::class, 'destroy_admission_process']);
 
+// Fee Structure
+Route::get('/admin/fee-structure-list', [AdminController::class, 'fee_structure_list']);
+Route::get('/admin/add-fee-structure', [AdminController::class, 'add_fee_structure']);
+Route::post('/admin/store-fee-structure', [AdminController::class, 'store_fee_structure']);
+Route::get('/admin/edit-fee-structure/{id}', [AdminController::class, 'edit_fee_structure']);
+Route::put('/admin/update-fee-structure/{id}', [AdminController::class, 'update_fee_structure']);
+Route::get('/admin/delete-fee-structure/{id}', [AdminController::class, 'destroy_fee_structure']);
+
+// Bank Details
+Route::get('/admin/bank-details', [AdminController::class, 'bank_details']);
+Route::post('/admin/update-bank-details', [AdminController::class, 'update_bank_details']);
+
+
+
 
 
 

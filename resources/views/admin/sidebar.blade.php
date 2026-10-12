@@ -56,16 +56,7 @@
                         <i class="mdi mdi-view-carousel-outline"></i> <span data-key="t-layouts">About</span> 
                         </a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link menu-link" href="{{ url('admin/patrika-list') }}">
-                        <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Patrika</span>
-                        </a>
-                     </li>  
-                    <li class="nav-item">
-                       <a class="nav-link menu-link" href="{{ url('admin/add-ncc') }}" >
-                       <i class="mdi mdi-view-grid-plus-outline"></i> <span data-key="t-apps">NCC</span>
-                       </a>
-                    </li>                    
+                    
                      <li class="nav-item">
                         <a class="nav-link menu-link" href="{{ url('admin/student') }}">
                         <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Students</span>
@@ -76,11 +67,7 @@
                         <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Gallery</span>
                         </a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link menu-link" href="{{ url('admin/alumnis') }}">
-                        <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Alumni</span>
-                        </a>
-                     </li>
+
                       <li class="nav-item">
                         <a class="nav-link menu-link" href="{{ url('admin/add-testimonial') }}">
                         <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Testimonials </span>
@@ -132,6 +119,16 @@
                </a>
             </li>            
             <li class="nav-item">
+               <a class="nav-link menu-link" href="{{ url('admin/fee-structure-list') }}">
+               <i class="mdi mdi-cash-multiple"></i> <span data-key="t-widgets">Fee Structure</span>
+               </a>
+            </li>            
+            <li class="nav-item">
+               <a class="nav-link menu-link" href="{{ url('admin/bank-details') }}">
+               <i class="mdi mdi-bank"></i> <span data-key="t-widgets">Bank Details</span>
+               </a>
+            </li>            
+            <li class="nav-item">
                <a class="nav-link menu-link" href="{{ url('admin/event-list') }}">
                <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Event</span>
                </a>
@@ -152,24 +149,24 @@
                         <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Principal Message</span>
                         </a>
                      </li>
-                     <li class="nav-item">
+                     <!-- <li class="nav-item">
                        <a class="nav-link menu-link" href="{{ url('admin/add-exdirector') }}" >
                        <i class="mdi mdi-view-grid-plus-outline"></i> <span data-key="t-apps">Ex-Director</span>
                        </a>
-                     </li>                     
+                     </li>                      -->
                 </ul>
                </div>
             </li> 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                <a class="nav-link menu-link" href="{{ url('admin/create-social-activities') }}">
                <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Social Activities</span>
                </a>
-            </li>     
-            <li class="nav-item">
+            </li>      -->
+            <!-- <li class="nav-item">
                <a class="nav-link menu-link" href="{{ url('admin/add-ncc') }}" >
                <i class="mdi mdi-view-grid-plus-outline"></i> <span data-key="t-apps">NCC</span>
                </a>
-            </li>           
+            </li>            -->
             <li class="nav-item">
                <a class="nav-link menu-link" href="{{ url('admin/associate-member-list') }}">
                <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Associate Members</span>
@@ -181,8 +178,8 @@
                </a>
             </li>           
             <li class="nav-item">
-               <a class="nav-link menu-link" href="{{ url('admin/create-infrastructure') }}" >
-               <i class="mdi mdi-view-grid-plus-outline"></i> <span data-key="t-apps">Add infrastructure</span>
+               <a class="nav-link menu-link" href="{{ url('admin/infrastructure') }}" >
+               <i class="mdi mdi-office-building"></i> <span data-key="t-apps">Infrastructure</span>
                </a>
             </li>                
             <li class="nav-item">

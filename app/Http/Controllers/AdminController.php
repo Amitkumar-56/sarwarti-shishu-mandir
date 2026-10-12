@@ -29,6 +29,8 @@ use App\Models\AchievementImage;
 use App\Models\Faculty;
 use App\Models\Facultycategory;
 use App\Models\Admissionprocess;
+use App\Models\Feestructure;
+use App\Models\BankDetail;
 use Validator;
 use Session;
 use DB;
@@ -1741,7 +1743,7 @@ class AdminController extends Controller
     {
         $achievement = new Achievement;
         $achievement->title = $request->input('title');
-        $achievement->description = $request->input('description');        
+        $achievement->description = $request->input('description') ?? '';        
         $achievement->save();
         return redirect('/admin/achievement-list')->with('status', 'Achievement Sucessfully Added');
     } 
@@ -1749,9 +1751,11 @@ class AdminController extends Controller
     {
        $achievement = Achievement::find($id);      
        $achievement->title = $request->input('title');
-       $achievement->description = $request->input('description');          
+       if ($request->has('description')) {
+           $achievement->description = $request->input('description') ?? '';
+       }
        $achievement->update();
-       return redirect('/admin/achievement-list')->with('status', 'Achievement Sucessfully Added');
+       return redirect('/admin/achievement-list')->with('status', 'Achievement Sucessfully Updated');
     }     
     public function destroy_achievement($id)    
     {
@@ -1876,6 +1880,87 @@ class AdminController extends Controller
         $apdata = Admissionprocess::find($id);
         $apdata->delete();
         return redirect('/admin/admission-process-list')->with('status', 'Admission process Deleted Sucessfully');
+    }    
+
+    // Fee Structure
+    public function fee_structure_list()
+    {        
+        $feelist = Feestructure::all();
+        return view('admin.fee-structure.fee-structure-list', compact('feelist'));
+    }
+    public function add_fee_structure()
+    {
+        return view('admin.fee-structure.add-fee-structure');
+    }
+    public function edit_fee_structure($id)
+    {
+        $feedata = Feestructure::find($id);
+        return view('admin.fee-structure.edit-fee-structure', compact('feedata'));
+    } 
+    public function store_fee_structure(Request $request)
+    {
+        $feedata = new Feestructure;
+        $feedata->title = $request->input('title');
+        $feedata->description = $request->input('description');
+        $feedata->save();
+        return redirect('/admin/fee-structure-list')->with('status', 'Fee Structure Successfully Added');
+    }
+    public function update_fee_structure(Request $request, $id)
+    {
+        $feedata = Feestructure::find($id);      
+        $feedata->title = $request->input('title');
+        $feedata->description = $request->input('description');
+        $feedata->save();
+        return redirect('/admin/fee-structure-list')->with('status', 'Fee Structure Successfully Updated');
+    }     
+    public function destroy_fee_structure($id)    
+    {
+        $feedata = Feestructure::find($id);
+        if ($feedata) {
+            $feedata->delete();
+        }
+        return redirect('/admin/fee-structure-list')->with('status', 'Fee Structure Deleted Successfully');
+    }    
+
+    // Bank Details
+    public function bank_details()
+    {
+        $bank = BankDetail::first();
+        if (!$bank) {
+            $bank = new BankDetail;
+            $bank->account_holder = 'Kusum Goel Dr. Santosh Saraswati Vidya Mandir';
+            $bank->bank_name = 'Bank Of Baroda';
+            $bank->account_number = '21860200000865';
+            $bank->ifsc_code = 'BARB0RAJNAG';
+            $bank->branch = 'RDC Raj Nagar, Ghaziabad';
+            $bank->save();
+        }
+        return view('admin.bank-details.edit', compact('bank'));
+    }
+
+    public function update_bank_details(Request $request)
+    {
+        $bank = BankDetail::first();
+        if (!$bank) {
+            $bank = new BankDetail;
+        }
+
+        $bank->account_holder = $request->input('account_holder');
+        $bank->bank_name = $request->input('bank_name');
+        $bank->account_number = $request->input('account_number');
+        $bank->ifsc_code = $request->input('ifsc_code');
+        $bank->branch = $request->input('branch');
+        $bank->note = $request->input('note');
+
+        if ($request->hasFile('qr_code')) {
+            $file = $request->file('qr_code');
+            $filename = 'qr_' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads/bank/'), $filename);
+            $bank->qr_code = $filename;
+        }
+
+        $bank->save();
+        return redirect()->back()->with('status', 'Bank Details Successfully Updated');
     }    
     
     public function online_registrations()

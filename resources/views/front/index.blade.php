@@ -159,7 +159,7 @@
    @endphp    
    <div class="container-fluid">
       <div class="section-title">
-         <h2>Play to 8th Topper's List</h2>
+         <h2>Play to 5th Topper's List</h2>
       </div>
       <div class="row align-items-center">
          <div class="topper-slider owl-carousel owl-theme">

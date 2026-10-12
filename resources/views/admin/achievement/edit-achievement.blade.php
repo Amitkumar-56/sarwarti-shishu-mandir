@@ -40,12 +40,8 @@
                            <div class="row gy-4">
                               <div class="col-xxl-12 col-md-12">
                                  <label for="labelInput" class="form-label">Title</label>
-                                 <input type="text" name="title" value="{{ $achievement->title ?? '' }}" class="form-control">
+                                 <input type="text" name="title" value="{{ $achievement->title ?? '' }}" class="form-control" required>
                               </div> 
-                              <div class="col-xxl-12 col-md-12">
-                                 <label for="labelInput" class="form-label">Description</label>
-                                 <textarea id="content" type="text" name="description" value="{{ $achievement->description ?? '' }}" class="form-control">{!! $achievement->description ?? '' !!}</textarea>
-                              </div>
                               <div class="col-xxl-12 col-md-12">
                                  <input type="submit" value="Submit" class="btn btn-primary">
                               </div>

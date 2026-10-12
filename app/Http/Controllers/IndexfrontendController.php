@@ -95,7 +95,8 @@ class IndexfrontendController extends Controller
     
 
     public function feepayment(){
-        return view('front.fee-payment');
+        $bank = \App\Models\BankDetail::first();
+        return view('front.fee-payment', compact('bank'));
     }
     
     public function social_activities($id)
@@ -115,7 +116,8 @@ class IndexfrontendController extends Controller
         return view('front.facultulist');
     }    
      public function feestructure(){
-        return view('front.fee-structure');
+        $feedata = \App\Models\Feestructure::first();
+        return view('front.fee-structure', compact('feedata'));
     }
     public function Oldfeestructure(){
         return view('front.Old-feestructure');

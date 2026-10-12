@@ -8879,3 +8879,17 @@ header {
     mix-blend-mode: multiply;
     background-color: transparent !important;
 }
+
+/* Force pure white for admission hero card text */
+.admission-hero-card,
+.admission-hero-card * {
+    -webkit-text-fill-color: initial;
+}
+.admission-hero-card .admission-school-name,
+.admission-hero-card .admission-main-heading {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: unset !important;
+}
