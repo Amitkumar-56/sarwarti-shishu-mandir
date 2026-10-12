@@ -1,6 +1,6 @@
 @include('front.header')
 <div class="page-banner-area">
-   <img class="page-banner" src="{{ asset('public/front') }}/images/breadcrumb-bg-image.jpg" alt="Courses">
+   <img class="page-banner" src="{{ asset('public/front') }}/images/banner_events.jpg" alt="Events">
    <div class="container">
       <div class="page-banner-content">
          <h1>Events List</h1>

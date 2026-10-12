@@ -31,7 +31,7 @@ $missionImg = getVisionMissionImg($data->image_mission ?? '', 'mission');
 
 <!-- Page Banner Area -->
 <div class="page-banner-area">
-   <img class="page-banner" src="{{ asset('public/front') }}/images/breadcrumb-bg-image.jpg" alt="Mission and Vision">
+   <img class="page-banner" src="{{ asset('public/front') }}/images/banner_mission.jpg" alt="Mission and Vision">
    <div class="page-banner-content">
       <h1>{{ $data->title_mission ?? 'Mission & Vision' }}</h1>
       <ul>

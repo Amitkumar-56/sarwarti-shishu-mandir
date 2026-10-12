@@ -5,7 +5,7 @@ $apdata = DB::table('admissionprocesses')->first();
 
 <!-- Page Banner Area -->
 <div class="page-banner-area">
-   <img class="page-banner" src="{{ asset('public/front') }}/images/breadcrumb-bg-image.jpg" alt="Admission Procedure">
+   <img class="page-banner" src="{{ asset('public/front') }}/images/banner_admission.jpg" alt="Admission Procedure">
    <div class="page-banner-content">
       <h1>{{ $apdata->title ?? 'Procedure For Admission' }}</h1>
       <ul>

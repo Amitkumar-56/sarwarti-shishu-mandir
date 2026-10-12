@@ -40,7 +40,7 @@ if (!function_exists('getInfraImg')) {
 
 <!-- Page Banner Area -->
 <div class="page-banner-area">
-   <img class="page-banner" src="{{ asset('public/front') }}/images/breadcrumb-bg-image.jpg" alt="School Infrastructure">
+   <img class="page-banner" src="{{ asset('public/front') }}/images/banner_infrastructure.jpg" alt="School Infrastructure">
    <div class="page-banner-content">
       <h1>School Infrastructure</h1>
       <ul>

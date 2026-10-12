@@ -96,7 +96,7 @@
          </div>
          <div class="col-lg-5 ">
             <div class="campus-image" style="text-align: center;">
-               <img src="{{ asset('public/front') }}/images/generated_school_front.jpg" alt="School Campus" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+               <img src="{{ asset('public/front') }}/images/play_school_campus.jpg" alt="Saraswati Shishu Mandir Play School" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
             </div>
          </div>
       </div>
@@ -167,11 +167,11 @@
             <div class="single-campus-card-topper">
                <div class="resolt-image-box">
                   <div class="result-image">
-                     <img src="{{ asset('admin/img/').'/'.$item->image ?? '' }}" alt="Image">
+                     <img src="{{ asset('admin/img/' . $item->image) }}" alt="{{ $item->name ?? 'Topper' }}">
                   </div>
                   <div class="result-text-percentage">
                      <h2 class="result-tittle">{{$item->name ?? '' }}</h2>
-                     <p>Class: {{$item->classs ?? '' }}<sup>th</sup> </sup></p>
+                     <p>Class: {{$item->classs ?? '' }}</p>
                      <p>{{$item->marks ?? '' }} <span> % </span></p>
                   </div>
                </div>

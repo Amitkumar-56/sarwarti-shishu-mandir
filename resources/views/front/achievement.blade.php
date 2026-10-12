@@ -35,7 +35,7 @@ if (!function_exists('getAchievementImg')) {
 
 <!-- Page Banner Area -->
 <div class="page-banner-area">
-   <img class="page-banner" src="{{ asset('public/front') }}/images/breadcrumb-bg-image.jpg" alt="Our Achievements">
+   <img class="page-banner" src="{{ asset('public/front') }}/images/banner_achievement.jpg" alt="Our Achievements">
    <div class="page-banner-content">
       <h1>Our Achievements</h1>
       <ul>
