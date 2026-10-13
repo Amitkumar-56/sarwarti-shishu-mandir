@@ -66,6 +66,198 @@
                  padding-left: 32px !important; 
              }
          }
+
+         /* =================================================== */
+         /* Dual Logo Header Styles (Desktop & Mobile)           */
+         /* =================================================== */
+         .desktop-nav .navbar {
+             position: relative !important;
+             display: flex !important;
+             align-items: center !important;
+             justify-content: center !important;
+             width: 100% !important;
+             min-height: 86px !important;
+             padding: 0 !important;
+         }
+         .desktop-logo-group {
+             position: absolute !important;
+             left: 15px !important;
+             top: 50% !important;
+             transform: translateY(-50%) !important;
+             display: inline-flex !important;
+             align-items: center !important;
+             gap: 12px !important;
+             text-decoration: none !important;
+             padding: 0 !important;
+             margin: 0 !important;
+             z-index: 10 !important;
+         }
+         .desktop-logo-school {
+             max-height: 80px !important;
+             width: auto !important;
+             display: inline-block !important;
+             vertical-align: middle;
+             transition: max-height 0.3s ease;
+         }
+         .desktop-logo-vidyabharati {
+             max-height: 75px !important;
+             width: auto !important;
+             mix-blend-mode: multiply !important;
+             display: inline-block !important;
+             vertical-align: middle;
+             transition: max-height 0.3s ease;
+         }
+         .is-sticky .desktop-logo-school {
+             max-height: 65px !important;
+         }
+         .is-sticky .desktop-logo-vidyabharati {
+             max-height: 60px !important;
+         }
+         .desktop-nav .navbar .navbar-collapse {
+             width: 100% !important;
+             display: flex !important;
+             justify-content: center !important;
+             margin: 0 auto !important;
+         }
+         .desktop-nav .navbar .navbar-nav {
+             margin: 0 auto !important;
+             display: flex !important;
+             justify-content: center !important;
+             align-items: center !important;
+             padding: 0 !important;
+         }
+         .desktop-nav .navbar .navbar-nav .nav-item a {
+             white-space: nowrap !important;
+             letter-spacing: 0.3px;
+         }
+
+         /* Responsive adjustments for desktop sizes to ensure centered menu never overflows */
+         @media (min-width: 1400px) {
+             .desktop-nav .navbar .navbar-nav .nav-item a {
+                 margin-left: 9px !important;
+                 margin-right: 9px !important;
+                 font-size: 14px !important;
+             }
+         }
+         @media (min-width: 1200px) and (max-width: 1399px) {
+             .desktop-nav .navbar .navbar-nav .nav-item a {
+                 margin-left: 6px !important;
+                 margin-right: 6px !important;
+                 font-size: 13px !important;
+             }
+             .desktop-logo-school {
+                 max-height: 72px !important;
+             }
+             .desktop-logo-vidyabharati {
+                 max-height: 68px !important;
+             }
+         }
+         @media (min-width: 1080px) and (max-width: 1199px) {
+             .desktop-nav .navbar .navbar-nav .nav-item a {
+                 margin-left: 4px !important;
+                 margin-right: 4px !important;
+                 font-size: 12px !important;
+             }
+             .desktop-logo-group {
+                 left: 10px !important;
+                 gap: 8px !important;
+             }
+             .desktop-logo-school {
+                 max-height: 60px !important;
+             }
+             .desktop-logo-vidyabharati {
+                 max-height: 56px !important;
+             }
+             .desktop-nav .navbar {
+                 min-height: 72px !important;
+             }
+         }
+         @media (min-width: 992px) and (max-width: 1079px) {
+             .desktop-nav .navbar .navbar-nav .nav-item a {
+                 margin-left: 3px !important;
+                 margin-right: 3px !important;
+                 font-size: 11px !important;
+             }
+             .desktop-logo-group {
+                 left: 8px !important;
+                 gap: 6px !important;
+             }
+             .desktop-logo-school {
+                 max-height: 48px !important;
+             }
+             .desktop-logo-vidyabharati {
+                 max-height: 44px !important;
+             }
+             .desktop-nav .navbar {
+                 min-height: 62px !important;
+             }
+         }
+         .desktop-nav .container-fluid {
+             position: relative !important;
+             padding-left: 15px !important;
+             padding-right: 15px !important;
+         }
+
+         /* Mobile Logo Settings */
+         @media (max-width: 991px) {
+             .mobile-responsive-nav .mobile-responsive-menu {
+                 position: relative !important;
+             }
+             .mobile-responsive-nav .mobile-responsive-menu .logo {
+                 width: auto !important;
+                 max-width: calc(100% - 65px) !important;
+                 float: left !important;
+                 display: inline-flex !important;
+                 align-items: center !important;
+                 padding: 4px 0 !important;
+             }
+             .mobile-logo-group {
+                 display: inline-flex !important;
+                 align-items: center !important;
+                 gap: 8px !important;
+                 text-decoration: none !important;
+             }
+             .mobile-logo-school {
+                 max-height: 42px !important;
+                 width: auto !important;
+                 display: inline-block !important;
+                 vertical-align: middle;
+             }
+             .mobile-logo-vidyabharati {
+                 max-height: 40px !important;
+                 width: auto !important;
+                 mix-blend-mode: multiply !important;
+                 display: inline-block !important;
+                 vertical-align: middle;
+             }
+         }
+
+         @media (max-width: 480px) {
+             .mobile-logo-group {
+                 gap: 6px !important;
+             }
+             .mobile-logo-school {
+                 max-height: 36px !important;
+             }
+             .mobile-logo-vidyabharati {
+                 max-height: 34px !important;
+             }
+         }
+
+         @media (max-width: 360px) {
+             .mobile-logo-group {
+                 gap: 4px !important;
+             }
+             .mobile-logo-school {
+                 max-height: 32px !important;
+             }
+             .mobile-logo-vidyabharati {
+                 max-height: 30px !important;
+             }
+         }
+         .mobile-downloads {
+             display: none !important;
+         }
       </style>
    </head>
     <body>
@@ -74,9 +266,9 @@
             <div class="container">
                <div class="mobile-responsive-menu">
                   <div class="logo">
-                     <a href="{{ url('/') }}" style="display: inline-block;">
-                     <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="main-logo" alt="logo" style="max-height: 80px;">
-                     <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="white-logo" alt="logo" style="max-height: 80px;">
+                     <a href="{{ url('/') }}" class="mobile-logo-group">
+                        <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="main-logo mobile-logo-school" alt="Saraswati Shishu Mandir">
+                        <img src="{{ asset('public/front') }}/images/vidyabharati_logo.png" class="mobile-logo-vidyabharati" alt="Vidya Bharati Logo">
                      </a>
                   </div>
                   <div class="mobile-downloads">
@@ -97,9 +289,9 @@
          <div class="desktop-nav">
             <div class="container-fluid">
                <nav class="navbar navbar-expand-md navbar-light">
-                  <a class="navbar-brand" href="{{ url('/') }}">
-                  <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="main-logo" alt="logo" style="max-height: 85px;">
-                  <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="white-logo" alt="logo" style="max-height: 85px;">
+                  <a class="navbar-brand desktop-logo-group" href="{{ url('/') }}">
+                     <img src="{{ asset('public/front') }}/images/saraswati-logo-new.png" class="main-logo desktop-logo-school" alt="Saraswati Shishu Mandir">
+                     <img src="{{ asset('public/front') }}/images/vidyabharati_logo.png" class="desktop-logo-vidyabharati" alt="Vidya Bharati Logo">
                   </a>
                   <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                      <ul class="navbar-nav mx-auto">
@@ -164,11 +356,7 @@
                            </ul>
                         </li>
                         <li class="nav-item">
-                           <a href="javascript:void(0)" class="nav-link dropdown-toggle">Fee & Payments</a>
-                           <ul class="dropdown-menu">
-                               <li><a href="{{ url('fee-structure') }}">Fee Structure</a></li>
-                               <li><a href="{{ url('fee-payment') }}">Online Fee</a></li>
-                            </ul>
+                           <a href="{{ url('fee-structure') }}" class="nav-link">Fee Structure</a>
                         </li>
 
                        
@@ -188,9 +376,6 @@
                            <a href="{{url('/contact')}}" class="nav-link">Contact Us</a>
                         </li>
                      </ul>
-                     <div class="others-options d-none d-md-flex align-items-center ml-auto" style="margin-left: auto; background: transparent;">
-                        <img src="{{ asset('public/front') }}/images/vidyabharati_logo.png" alt="Vidya Bharati Logo" style="max-height: 85px; mix-blend-mode: multiply; background: transparent;">
-                     </div>
                   </div>
                </nav>
             </div>

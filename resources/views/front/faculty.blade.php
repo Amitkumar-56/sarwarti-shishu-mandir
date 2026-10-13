@@ -44,15 +44,7 @@
 .table-striped tbody tr:hover {
     background-color: rgba(227, 40, 69, 0.05);
 }
-/* Custom headings for faculty groups */
-td.text-center[colspan="3"] {
-    background-color: #e32845 !important;
-    color: #fff !important;
-    font-size: 18px !important;
-    font-weight: 700 !important;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+
 @media only screen and (max-width: 767px) {
     .faculty-detail-box { padding: 15px; }
 }
@@ -71,159 +63,32 @@ td.text-center[colspan="3"] {
                      </tr>
                   </thead>
                   <tbody>
-                     <tr>
-                        <td>1.</td>
-                        <td>PANKAJ KUMAR</td>
-                        <td>PRINCIPAL</td>
-                     </tr>
-                     <tr>
-                        <td>2.</td>
-                        <td>PRIYANKA SHARMA</td>
-                        <td>VICE- PRINCIPAL</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">Hindi</td>
-                     </tr>                     
                      @php
-                     $faculty =DB::table('faculties')->where('faculty_id','1')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
+                     $faculty = DB::table('faculty')
+                        ->orderByRaw("
+                           CASE 
+                              WHEN UPPER(designation) LIKE '%PRINCIPAL%' AND UPPER(designation) NOT LIKE '%VICE%' THEN 1
+                              WHEN UPPER(designation) LIKE '%VICE%PRINCIPAL%' THEN 2
+                              WHEN UPPER(designation) LIKE '%PGT%' THEN 3
+                              WHEN UPPER(designation) LIKE '%TGT%' THEN 4
+                              WHEN UPPER(designation) LIKE '%PRT%' THEN 5
+                              ELSE 6
+                           END, id ASC
+                        ")
+                        ->get();
+                     @endphp
+                     @forelse($faculty as $key => $item)
                      <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
+                        <td style="width: 10%; text-align: center; font-weight: 600;">{{ $key + 1 }}.</td>
+                        <td style="width: 50%; font-weight: 600; color: #1a1a1a;">{{ $item->name ?? '' }}</td>
+                        <td style="width: 40%; color: #032274; font-weight: 500;">{{ $item->designation ?? '' }}</td>
                      </tr>
-                     @endforeach
+                     @empty
                      <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">ENGLISH</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','3')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
+                        <td colspan="3" class="text-center py-4">No faculty records found.</td>
                      </tr>
-                     @endforeach  
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">MATHS</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','4')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach  
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">SCIENCE</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','5')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach  
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">COMMERCE</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','6')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach     
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">SOCIAL SCIENCE</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','7')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach 
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">PHYSICAL EDUCATION</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','8')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach    
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">COMPUTER</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','9')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach      
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">PRT</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','10')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach  
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">LIBRARY</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','11')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach 
-                     <tr>
-                        <td style="background-color:#7b4d9d; color:#fff;font-size:17px; font-weight:600;" class="text-center" colspan="3">MUSUC</td>
-                     </tr> 
-                     @php
-                     $faculty =DB::table('faculties')->where('faculty_id','12')->get();
-                     @endphp 
-                     @foreach($faculty as $key=>$item)
-                     <tr>
-                        <td>{{ $key+1 ?? '' }}</td>
-                        <td>{{ $item->name ?? '' }}</td>
-                        <td>{{ $item->designation ?? '' }}</td>
-                     </tr>
-                     @endforeach
-                     </tbody>
+                     @endforelse
+                  </tbody>
                </table>
             </div>
          </div>

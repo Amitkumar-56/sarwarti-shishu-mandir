@@ -123,11 +123,7 @@
                <i class="mdi mdi-cash-multiple"></i> <span data-key="t-widgets">Fee Structure</span>
                </a>
             </li>            
-            <li class="nav-item">
-               <a class="nav-link menu-link" href="{{ url('admin/bank-details') }}">
-               <i class="mdi mdi-bank"></i> <span data-key="t-widgets">Bank Details</span>
-               </a>
-            </li>            
+
             <li class="nav-item">
                <a class="nav-link menu-link" href="{{ url('admin/event-list') }}">
                <i class="mdi mdi-puzzle-outline"></i> <span data-key="t-widgets">Event</span>

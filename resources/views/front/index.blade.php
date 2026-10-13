@@ -274,6 +274,19 @@
     opacity: 0.3;
     margin: 0 5px;
 }
+.testimonial-slider .owl-stage {
+    display: flex !important;
+}
+.testimonial-slider .owl-item {
+    display: flex !important;
+    height: auto !important;
+}
+.testimonial-slider .testimonial-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
 </style>
 <section class="clients-testimonials-areas pt-100 pb-70" style="background-color: #f9faff;">
    @php
