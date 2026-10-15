@@ -26,9 +26,11 @@
                  background-color: #ffffff !important;
                  border: none !important;
                  border-radius: 12px !important;
-                 box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
-                 padding: 10px 0 !important;
-                 min-width: 260px !important;
+                 box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+                 padding: 8px 0 !important;
+                 min-width: 295px !important;
+                 width: max-content !important;
+                 max-width: 330px !important;
                  opacity: 0;
                  visibility: hidden;
                  transform: translateY(20px);
@@ -45,17 +47,20 @@
              }
              .desktop-nav .navbar-nav .dropdown-menu li {
                  display: block !important;
-                 width: 100%;
+                 width: 100% !important;
              }
              .desktop-nav .navbar-nav .dropdown-menu li a {
-                 padding: 12px 25px !important;
+                 padding: 10px 18px !important;
                  color: #333333 !important;
-                 font-size: 15px !important;
+                 font-size: 14.5px !important;
                  font-weight: 500 !important;
                  border-bottom: 1px solid #f5f5f5 !important;
-                 transition: all 0.3s ease !important;
+                 transition: all 0.25s ease !important;
                  display: block !important;
                  text-transform: capitalize !important;
+                 white-space: normal !important;
+                 word-break: normal !important;
+                 line-height: 1.4 !important;
              }
              .desktop-nav .navbar-nav .dropdown-menu li:last-child a {
                  border-bottom: none !important;
@@ -63,7 +68,7 @@
              .desktop-nav .navbar-nav .dropdown-menu li a:hover {
                  background-color: #fdf2f4 !important;
                  color: #e32845 !important;
-                 padding-left: 32px !important; 
+                 padding-left: 22px !important; 
              }
          }
 
@@ -116,13 +121,15 @@
          .desktop-nav .navbar .navbar-collapse {
              width: 100% !important;
              display: flex !important;
-             justify-content: center !important;
-             margin: 0 auto !important;
+             justify-content: flex-end !important;
+             margin: 0 !important;
+             padding-left: 260px !important;
+             padding-right: 20px !important;
          }
          .desktop-nav .navbar .navbar-nav {
-             margin: 0 auto !important;
+             margin: 0 0 0 auto !important;
              display: flex !important;
-             justify-content: center !important;
+             justify-content: flex-end !important;
              align-items: center !important;
              padding: 0 !important;
          }
@@ -140,6 +147,10 @@
              }
          }
          @media (min-width: 1200px) and (max-width: 1399px) {
+             .desktop-nav .navbar .navbar-collapse {
+                 padding-left: 230px !important;
+                 padding-right: 15px !important;
+             }
              .desktop-nav .navbar .navbar-nav .nav-item a {
                  margin-left: 6px !important;
                  margin-right: 6px !important;
@@ -153,6 +164,10 @@
              }
          }
          @media (min-width: 1080px) and (max-width: 1199px) {
+             .desktop-nav .navbar .navbar-collapse {
+                 padding-left: 190px !important;
+                 padding-right: 10px !important;
+             }
              .desktop-nav .navbar .navbar-nav .nav-item a {
                  margin-left: 4px !important;
                  margin-right: 4px !important;
@@ -173,6 +188,10 @@
              }
          }
          @media (min-width: 992px) and (max-width: 1079px) {
+             .desktop-nav .navbar .navbar-collapse {
+                 padding-left: 150px !important;
+                 padding-right: 5px !important;
+             }
              .desktop-nav .navbar .navbar-nav .nav-item a {
                  margin-left: 3px !important;
                  margin-right: 3px !important;
@@ -322,18 +341,9 @@
                               <!--<li><a href="vidya-bharti-lakshay">Vidya Bharti Lakshay</a></li>-->
                               <!--<li><a href="{{ url('association-member') }}">Association Member List</a></li>-->
                            </ul>
-                        </li>
-                        <li class="nav-item">
-                           <a href="#" class="nav-link dropdown-toggle">Life @ Our School</a>
-                           <ul class="dropdown-menu">
-                              <li class="nav-item">
-                                 <a href="{{ url('achievement') }}" class="nav-link">Our Achievement</a>
-                              </li>
-                              <!-- <li class="nav-item">
-                                 <a href="{{ url('alumni') }}" class="nav-link">Alumni</a>
-                              </li> -->
-                           </ul>
-                        </li>
+                         <li class="nav-item">
+                            <a href="{{ url('achievement') }}" class="nav-link">Our Achievement</a>
+                         </li>
                         <li class="nav-item">
                            <a href="{{ url('gallery') }}" class="nav-link">Gallery</a>
                         </li>

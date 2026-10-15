@@ -1,4 +1,4 @@
-@include('front.header')
+﻿@include('front.header')
 
 @php
 // Robust image resolver
@@ -146,7 +146,7 @@ if (!function_exists('getAchievementImg')) {
 .achievements-showcase-area {
    background: #f4f6fa;
    padding: 55px 0 90px 0;
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 /* Intro Section */
@@ -172,7 +172,7 @@ if (!function_exists('getAchievementImg')) {
 }
 
 .achievements-main-title {
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 32px;
    font-weight: 800;
    color: #032274 !important;
@@ -374,7 +374,7 @@ if (!function_exists('getAchievementImg')) {
 }
 
 .achievement-title-text {
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 19px;
    font-weight: 700;
    color: #032274 !important;

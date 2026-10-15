@@ -1,4 +1,4 @@
-@include('front.header')
+﻿@include('front.header')
 @php
 if (!isset($feedata) || !$feedata) {
    $feedata = DB::table('feestructures')->first();
@@ -92,7 +92,7 @@ if (!isset($feedata) || !$feedata) {
 .page-fee-structure-area {
    background: #f4f6fa;
    padding: 50px 0 80px 0;
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 /* Hero Header Card */
@@ -153,7 +153,7 @@ if (!isset($feedata) || !$feedata) {
 .fee-school-name,
 .fee-hero-card h2,
 .fee-hero-card h3 {
-   font-family: 'Playfair Display', Georgia, serif !important;
+   font-family: 'Poppins', sans-serif !important;
    font-size: 32px !important;
    font-weight: 800 !important;
    color: #ffffff !important;
@@ -291,7 +291,7 @@ if (!isset($feedata) || !$feedata) {
 /* Styled Section Headers */
 .fee-process-content h2,
 .fee-process-content h3 {
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 22px;
    font-weight: 700;
    color: #032274;

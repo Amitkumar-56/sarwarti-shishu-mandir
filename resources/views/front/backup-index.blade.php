@@ -1,4 +1,4 @@
-@include('front.header')
+﻿@include('front.header')
 <div class="banner-area">
    @php
    $slider = DB::table('banner')->get();
@@ -336,7 +336,7 @@
                   </div>
                </div>
                <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="">Science Department award Ceremony</a>
+                  <a  class="d_name" href="">Science Department award Ceremony</a>
                </div>
             </div>
          </div>
@@ -360,7 +360,7 @@
                   </div>
                </div>
                 <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="">Science Department award Ceremony</a>
+                  <a  class="d_name" href="">Science Department award Ceremony</a>
                </div>
             </div>
          </div>
@@ -384,7 +384,7 @@
                   </div>
                </div>
                 <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="">Science Department award Ceremony</a>
+                  <a  class="d_name" href="">Science Department award Ceremony</a>
                </div>
             </div>
          </div>
@@ -408,7 +408,7 @@
                   </div>
                </div>
                 <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="">Science Department award Ceremony</a>
+                  <a  class="d_name" href="">Science Department award Ceremony</a>
                </div>
             </div>
          </div>
@@ -433,7 +433,7 @@
                </div>
             </div>
              <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="">Science Department award Ceremony</a>
+                  <a  class="d_name" href="">Science Department award Ceremony</a>
                </div>
          </div>
           <div class="col-lg-4">
@@ -456,7 +456,7 @@
                   </div>
                </div>
                 <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="">Science Department award Ceremony</a>
+                  <a  class="d_name" href="">Science Department award Ceremony</a>
                </div>
             </div>
          </div>

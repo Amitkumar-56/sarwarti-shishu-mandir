@@ -207,10 +207,11 @@
     color: #1e293b;
     font-size: 13.5px;
     font-weight: 700;
-    padding: 0 12px;
+    padding: 0 10px;
     border-right: 1.5px solid #cbd5e1;
     user-select: none;
     flex-shrink: 0;
+    letter-spacing: 0.5px;
 }
 .enquiry-phone-control .enquiry-input-field {
     flex: 1;
@@ -304,10 +305,76 @@
     #slider #header {
         width: 290px !important;
     }
+    .button-two{
+        margin-left:-14px !important;
+    }
+}
+
+/* Footer layout and left text safety */
+.footer-area {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.footer-area .container,
+.copyright-area .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.footer-logo-area p {
+    text-align: left !important;
+    word-break: normal;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+.footer-logo-area h3,
+.footer-widjet h3 {
+    text-align: left !important;
+}
+.sidebar-contact-info ul.info-list li {
+    padding-left: 28px !important;
+    position: relative !important;
+}
+.sidebar-contact-info ul.info-list li i {
+    left: 0 !important;
+    top: 2px !important;
+}
+
+@media (max-width: 767px) {
+    .footer-area {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .footer-area .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .footer-logo-area, .footer-widjet {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        margin-bottom: 25px !important;
+    }
+    .footer-widjet.pd-left-50 {
+        padding-left: 5px !important;
+    }
+    .social-content {
+        padding-top: 15px !important;
+        padding-left: 0 !important;
+    }
+    .social-content ul {
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        padding-left: 0 !important;
+        margin: 10px 0 0 0 !important;
+    }
+    .social-content ul li {
+        margin: 0 !important;
+    }
 }
 </style>
 <div class="footer-area pb-20">
-   <div class="container-fluid">
+   <div class="container">
       <div class="row">
          <div class="col-lg-4 col-sm-6">
             <div class="footer-logo-area footer-widjet">
@@ -338,7 +405,7 @@
                <h3>Contact Us</h3>
                <div class="sidebar-contact-info">
                   <ul class="info-list">
-                     <li><i class="ri-phone-fill"></i> <a href="tel:9899350728"> 9899350728</a></li>
+                     <li><i class="ri-phone-fill"></i> <a href="tel:+919899350728">+91-9899350728</a></li>
                      <li><i class="ri-mail-line"></i><a href="mailto:ssswup2013@gmail.com"><span class="__cf_email__"> ssswup2013@gmail.com</span></a></li>
                      <li><i class="ri-map-pin-line"></i><a><span> Saraswati Shishu Mandir<br> Ghaziabad, Uttar Pradesh 201002</span></a></li>
                   </ul>
@@ -371,7 +438,7 @@
    </div>
 </div>
 <div class="copyright-area">
-   <div class="container-fluid">
+   <div class="container">
       <div class="copyright">
          <div class="row">
             <div class="col-lg-12 col-md-12">
@@ -410,7 +477,7 @@
                <i class="ri-phone-fill"></i>
             </div>
             <div class="enquiry-help-details">
-               <a href="tel:9899350728" class="enquiry-help-phone">9899350728</a>
+               <a href="tel:+919899350728" class="enquiry-help-phone">+91-9899350728</a>
                <span class="enquiry-help-tag">Available for your queries</span>
             </div>
          </div>
@@ -419,11 +486,11 @@
          <form method="Post" action="{{ url('createquery') }}" class="enquiry-form-body">
              @csrf
             
-            <!-- Mobile Number with separated +91 dial badge -->
+            <!-- Mobile Number with separated +91 - dial badge -->
             <div class="enquiry-field-wrap">
                <label class="enquiry-label">Mobile Number <span class="text-danger">*</span></label>
                <div class="enquiry-phone-control">
-                  <span class="enquiry-dial-code">+91</span>
+                  <span class="enquiry-dial-code">+91 -</span>
                   <input type="tel" name="mobile" class="enquiry-input-field phone-field" placeholder="10-digit mobile number" required maxlength="10" pattern="[0-9]{10}">
                </div>
             </div>

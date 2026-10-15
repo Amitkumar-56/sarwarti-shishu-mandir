@@ -1,4 +1,4 @@
-@include('front.header')
+﻿@include('front.header')
 <div class="page-banner-area">
    <img class="page-banner" src="{{ asset('public/front') }}/images/PPGallery.png" alt="Courses">
    <div class="container">
@@ -27,7 +27,7 @@
                   @endforeach
                </div>
                <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="">{{$item['event_title'] ?? '' }}</a>
+                  <a  class="d_name" href="">{{$item['event_title'] ?? '' }}</a>
                </div>
             </div>
          </div>

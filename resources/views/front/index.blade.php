@@ -1,4 +1,4 @@
-@include('front.header')
+﻿@include('front.header')
 <div class="banner-area">
    @php
    $slider = DB::table('banner')->get();
@@ -89,7 +89,7 @@
             <div class="campus-content">
                <div class="campus-title">
                   <h2>Welcome to Saraswati Shishu Mandir Play School</h2>
-                  <?= substr($about->description,0, 359) ?>
+                  <p>{{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($about->description ?? '')), 380, '...') }}</p>
                </div>
                <a href="{{url('about')}}" class="default-btn btn">More Information<i class="flaticon-next"></i></a>
             </div>
@@ -157,7 +157,7 @@
    @php
    $topper = DB::table('toppers')->get();
    @endphp    
-   <div class="container-fluid">
+   <div class="container">
       <div class="section-title">
          <h2>Play to 5th Topper's List</h2>
       </div>
@@ -185,13 +185,13 @@
     @php
     $event =DB::table('events')->latest()->paginate(8); 
     @endphp 
-   <div class="container-fluid">
+   <div class="container">
       <div class="section-title">
          <h2>Events Images Gallery</h2>
       </div>
       <div class="row">
          @foreach ($event as $itm)
-         <div class="col-lg-3">
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
             <div class="our-event-box">
                <div class="event-image-slider2 owl-carousel owl-theme">
                   @php
@@ -206,7 +206,7 @@
                   @endforeach
                </div>
                <div class="activities-names">
-                  <a style="font-family: serif;" class="d_name" href="{{url('event-details/'.$itm->slug ??'')}}">{{ $itm->title ?? '' }}</a>
+                  <a  class="d_name" href="{{url('event-details/'.$itm->slug ??'')}}">{{ $itm->title ?? '' }}</a>
                </div>
             </div>
          </div>

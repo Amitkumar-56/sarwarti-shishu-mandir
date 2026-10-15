@@ -31,7 +31,7 @@ $missionImg = getVisionMissionImg($data->image_mission ?? '', 'mission');
 
 <!-- Page Banner Area -->
 <div class="page-banner-area">
-   <img class="page-banner" src="{{ asset('public/front') }}/images/banner_mission.jpg" alt="Mission and Vision">
+   <img class="page-banner" src="{{ asset('public/front') }}/images/breadcrumb-bg-image.jpg" alt="Mission and Vision">
    <div class="page-banner-content">
       <h1>{{ $data->title_mission ?? 'Mission & Vision' }}</h1>
       <ul>
@@ -156,7 +156,7 @@ $missionImg = getVisionMissionImg($data->image_mission ?? '', 'mission');
 .mission-vision-modern-sec {
    padding: 60px 0 90px 0;
    background: #f4f6fa;
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 /* Hero Card */
@@ -214,7 +214,7 @@ $missionImg = getVisionMissionImg($data->image_mission ?? '', 'mission');
 }
 
 .mv-hero-heading {
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 32px;
    font-weight: 800;
    color: #ffffff;
@@ -350,7 +350,7 @@ $missionImg = getVisionMissionImg($data->image_mission ?? '', 'mission');
 }
 
 .mv-block-title {
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 28px;
    font-weight: 800;
    color: #032274;
@@ -397,8 +397,8 @@ $missionImg = getVisionMissionImg($data->image_mission ?? '', 'mission');
 }
 
 .mv-rich-text ul li::before {
-   content: '\ea54'; /* RemixIcon checkbox circle fill */
-   font-family: 'remixicon';
+   content: '\eb80'; /* RemixIcon checkbox circle fill */
+   font-family: 'remixicon' !important;
    position: absolute;
    left: 0;
    top: 0;

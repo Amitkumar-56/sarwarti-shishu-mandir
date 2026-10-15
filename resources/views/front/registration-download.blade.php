@@ -562,7 +562,7 @@
                 <p style="margin: 5px 0 0 0; font-size: 18px; font-weight: bold; color:#000;">नेहरू नगर (गणेश अस्पताल के सामने) गाजियाबाद</p>
             </div>
             <div class="logo-container" style="width: 100px; text-align: right;">
-                <img src="{{ asset('public/front/images/saraswati-logo.png') }}" style="width:90px; height:auto;">
+                <img src="{{ asset('public/front/images/vidyabharati_logo.png') }}" style="width:90px; height:auto;">
             </div>
         </div>
 
@@ -641,7 +641,7 @@
                 <p style="margin: 5px 0 0 0; font-size: 16px; font-weight: bold; color:#000;">नेहरू नगर, गाजियाबाद, फोन : 4100151, 9350370660</p>
             </div>
             <div class="logo-container" style="width: 80px; text-align: right;">
-                <img src="{{ asset('public/front/images/saraswati-logo.png') }}" style="width:70px; height:auto;">
+                <img src="{{ asset('public/front/images/vidyabharati_logo.png') }}" style="width:70px; height:auto;">
             </div>
         </div>
 

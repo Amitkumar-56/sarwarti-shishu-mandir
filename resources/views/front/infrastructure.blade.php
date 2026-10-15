@@ -1,4 +1,4 @@
-@include('front.header')
+﻿@include('front.header')
 
 @php
 // Robust image resolver
@@ -221,7 +221,7 @@ if (!function_exists('getInfraImg')) {
 .infra-showcase-section {
    padding: 60px 0 90px 0;
    background: #f4f6fa;
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 /* Hero Banner */
@@ -279,7 +279,7 @@ if (!function_exists('getInfraImg')) {
 }
 
 .infra-hero-title {
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 32px;
    font-weight: 800;
    color: #ffffff;
@@ -398,7 +398,7 @@ if (!function_exists('getInfraImg')) {
    background: linear-gradient(135deg, #032274 0%, #0d38a5 100%);
    color: #ffd700;
    border-radius: 12px;
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 20px;
    font-weight: 800;
    display: flex;
@@ -409,7 +409,7 @@ if (!function_exists('getInfraImg')) {
 }
 
 .infra-block-title {
-   font-family: 'Playfair Display', Georgia, serif;
+   font-family: 'Poppins', sans-serif;
    font-size: 24px;
    font-weight: 700;
    color: #032274;
